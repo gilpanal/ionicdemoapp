@@ -8,13 +8,13 @@
 </ion-header>
 
 
-<ion-content class="tutorial-page" padding>
+<ion-content class="tutorial-page">
  
   <ion-slides pager>
     <ion-slide *ngFor="let slide of slides">
       <ion-toolbar>
         <ion-buttons end>
-          <button ion-button color="primary"></button>
+          <button ion-button color="primary">Skip</button>
         </ion-buttons>
       </ion-toolbar>
       <img [src]="slide.image" class="slide-image"/>
