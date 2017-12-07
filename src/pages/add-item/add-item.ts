@@ -36,7 +36,7 @@ export class AddItemPage {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad AddItemPage');
+   
   }
 
 }

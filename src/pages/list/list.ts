@@ -15,7 +15,8 @@ export class ListPage {
   public items: Array<{title: string, description: string}>;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public modalCtrl: ModalController, public dataService: DataProvider) {
-   
+    this.items = [];  
+    
     this.dataService.getData().then((todos) => {
       
       if(todos){
@@ -23,7 +24,6 @@ export class ListPage {
       }
 
     });
-    this.items = [];   
   }
 
   itemTapped(event, item) {
@@ -49,4 +49,8 @@ export class ListPage {
       this.items.push(item);
       this.dataService.save(this.items);
     }
+    ionViewDidLoad() {
+      
+    }
+   
 }
