@@ -34,8 +34,6 @@ export class AddItemPage {
   close(){
     this.view.dismiss();
   }
-  /*constructor(public navCtrl: NavController, public navParams: NavParams) {
-  }*/
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad AddItemPage');
