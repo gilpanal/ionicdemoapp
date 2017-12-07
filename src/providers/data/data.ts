@@ -11,7 +11,7 @@ import { Storage } from '@ionic/storage';
 export class DataProvider {
 
   constructor( public storage: Storage) {   
-    this.loadDefaultItems();
+   
   }
   getData() {
     return this.storage.get('todos'); 
@@ -20,16 +20,6 @@ export class DataProvider {
   save(data){
     this.storage.set('todos', data);
   }
-
-  loadDefaultItems(){
-    this.getData().then((todos) => {     
-      if(!todos){
-        let myDefaultList = this.createDefaultList();
-        this.save(myDefaultList); 
-      }
-    });
-  }
-
   createDefaultList(){
     let myDefaultList =[
       {title:'It is the end of the world', description:'As we know it (and I feel fine)'},

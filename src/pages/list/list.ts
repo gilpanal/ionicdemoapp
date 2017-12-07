@@ -22,6 +22,10 @@ export class ListPage {
       if(todos){
         this.items = todos;
       }
+      else{      
+        this.items = this.dataService.createDefaultList();
+        this.dataService.save(this.items);
+      }
 
     });
   }
